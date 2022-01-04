@@ -1,0 +1,36 @@
+name: Sync upstream
+
+on:
+  schedule:
+    # Every morning at 6am ET (11am UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fork repo
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+
+      # See: https://github.com/aormsby/Fork-Sync-With-Upstream-action
+      - name: Pull upstream changes to `dev` branch
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.2
+        with:
+          upstream_sync_repo: compdemocracy/polis
+          upstream_sync_branch: dev
+          target_sync_branch: dev
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          # For debugging.
+          #test_mode: true
+
+      # See: https://github.com/tgymnich/fork-sync
+      - name: Merge `dev` into `dev-g0v` branch via PR
+        uses: tgymnich/fork-sync@v1.6.3
+        with:
+          head: dev
+          base: dev-g0v
