@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - dev-g0v
+    paths-ignore:
+      - '**/*.md'
 
 jobs:
   build:
