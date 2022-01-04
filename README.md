@@ -8,6 +8,10 @@ Polis is an AI powered sentiment gathering platform. More organic than surveys a
    [docker-image-builds]: https://hub.docker.com/u/compdem
    [e2e-tests]: https://github.com/compdemocracy/polis/actions?query=workflow%3A%22E2E+Tests%22
 
+## About this Fork
+
+This fork is intended to be a bare minimal fork for adding continuous deployment to a future [unofficial] demonstration environment.
+
 ## :construction: Disclaimer
 
 The installation instructions below are currently focused on setting up a **development environment**.
