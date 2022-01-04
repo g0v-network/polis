@@ -2,11 +2,11 @@
 Polis is an AI powered sentiment gathering platform. More organic than surveys and less effort than focus groups, Polis meets a basic human need to be understood, at scale.
 
 <!-- Changes to badge text in URLs below, require changes to "name" value in .github/workflows/*.yml -->
-[![Docker Image Builds](https://github.com/compdemocracy/polis/workflows/Docker%20image%20builds/badge.svg)][docker-image-builds]
-[![E2E Tests](https://github.com/compdemocracy/polis/workflows/E2E%20Tests/badge.svg)][e2e-tests]
+[![Docker Image Builds](https://github.com/g0v-network/polis/workflows/Docker%20image%20builds/badge.svg)][docker-image-builds]
+[![E2E Tests](https://github.com/g0v-network/polis/workflows/E2E%20Tests/badge.svg)][e2e-tests]
 
-   [docker-image-builds]: https://hub.docker.com/u/compdem
-   [e2e-tests]: https://github.com/compdemocracy/polis/actions?query=workflow%3A%22E2E+Tests%22
+   [docker-image-builds]: https://github.com/orgs/g0v-network/packages?repo_name=polis
+   [e2e-tests]: https://github.com/g0v-network/polis/actions?query=workflow%3A%22E2E+Tests%22
 
 ## About this Fork
 
