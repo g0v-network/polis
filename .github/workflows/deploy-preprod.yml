@@ -6,11 +6,11 @@ on:
       - edge
       - stable
 
-  paths:
-    - .github/workflows/deploy-preprod.yml
-    - client-admin
-    - client-participation
-    - client-report
+    paths:
+      - .github/workflows/deploy-preprod.yml
+      - client-admin
+      - client-participation
+      - client-report
 
 
 jobs:
