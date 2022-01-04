@@ -33,6 +33,15 @@ e2e-run-subset: ## Run E2E tests: filter tests by TEST_FILTER envvar (without br
 e2e-run-all: ## Run E2E tests: all
 	$(E2E_RUN) npm run e2e:all
 
+helm-generate: ## Generate Helm chart from docker-compose.yml
+	kompose convert --chart --out helm-chart
+
+helm-install: helm-generate ## Install new helm chart 
+	helm install polis ./helm-chart
+
+helm-upgrade: helm-generate ## Upgrade existing helm chart to new revision
+	helm upgrade polis ./helm-chart
+
 
 # Helpful CLI shortcuts
 rbs: start-rebuild
