@@ -6,15 +6,17 @@ on:
       - edge
       - stable
 
-  paths:
-    - .github/workflows/deploy-preprod.yml
-    - client-admin
-    - client-participation
-    - client-report
+    paths:
+      - .github/workflows/deploy-preprod.yml
+      - client-admin
+      - client-participation
+      - client-report
 
 
 jobs:
   deploy-admin:
+    # Disabled since not on upstream.
+    if: false
     runs-on: ubuntu-latest
     steps:
 
