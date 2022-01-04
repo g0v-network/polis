@@ -1,8 +1,8 @@
 ARG TAG=dev
 
-FROM ghcr.io/g0v-network/polis-client-admin:${TAG}          as admin
-FROM ghcr.io/g0v-network/polis-client-participation:${TAG}  as participation
-FROM ghcr.io/g0v-network/polis-client-report:${TAG}         as report
+FROM ghcr.io/g0v-network/polis-client-admin:dev          as admin
+FROM ghcr.io/g0v-network/polis-client-participation:dev  as participation
+FROM ghcr.io/g0v-network/polis-client-report:dev         as report
 
 FROM node:17.3.0-alpine
 
